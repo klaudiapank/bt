@@ -61,8 +61,8 @@ p{margin:0 0 10px; max-width:62ch}
 
 .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
 .gallery img{width:100%; aspect-ratio:3/4; object-fit:cover}
-.gallery a:nth-child(2) img{border-radius:999px 999px 0 0}
-.gallery a:nth-child(4) img{border-radius:0 0 999px 999px}
+.gallery a:nth-child(4n+2) img{border-radius:999px 999px 0 0}
+.gallery a:nth-child(4n) img{border-radius:0 0 999px 999px}
 .split{display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:center}
 .split img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 60%}
 .plan{background:#fbf9f4; padding:8px; border:1px solid rgba(0,0,0,.08)}
@@ -105,7 +105,7 @@ dialog.lb button{position:fixed; top:12px; right:16px; font:700 28px/1 var(--fon
       <p class="dates">1.12.2026 – 30.5.2027<small>fixed-term Zwischenmiete, furnished</small></p>
     </div>
     <div class="pic">
-      <a class="zoom" href="img/full/living.jpg"><img src="img/living.jpg" alt="Living room: teak sideboard, red armchair, blue floor, sun through the tea room"></a>
+      <a class="zoom" href="img/living.jpg"><img src="img/living.jpg" alt="Living room: teak sideboard, red armchair, blue floor, sun through the tea room"></a>
       <div class="half"><b>1.100 €<small>warm / month</small></b></div>
     </div>
   </header>
@@ -130,10 +130,14 @@ dialog.lb button{position:fixed; top:12px; right:16px; font:700 28px/1 var(--fon
     <h2 class="s">the flat</h2>
     <p>Renovated, original mid-century furniture, workstation for home office.</p>
     <div class="gallery" style="margin-top:18px">
-      <a class="zoom" href="img/full/living.jpg"><img src="img/living.jpg" alt="Living room with sideboard and red chair" loading="lazy"></a>
-      <a class="zoom" href="img/full/sofa.jpg"><img src="img/sofa.jpg" alt="Blue sofa, yellow cushion and red floor lamp" loading="lazy"></a>
-      <a class="zoom" href="img/full/kitchen.jpg"><img src="img/kitchen.jpg" alt="Kitchen with wooden worktop and open shelves" loading="lazy"></a>
-      <a class="zoom" href="img/full/view.jpg"><img src="img/view.jpg" alt="View from the bathroom window over Kreuzberg rooftops" loading="lazy"></a>
+      <a class="zoom" href="img/living.jpg"><img src="img/living.jpg" alt="Living room with sideboard and red chair" loading="lazy"></a>
+      <a class="zoom" href="img/sofa.jpg"><img src="img/sofa.jpg" alt="Blue sofa, yellow cushion and red floor lamp" loading="lazy"></a>
+      <a class="zoom" href="img/kitchen.jpg"><img src="img/kitchen.jpg" alt="Kitchen with wooden worktop and open shelves" loading="lazy"></a>
+      <a class="zoom" href="img/view.jpg"><img src="img/view.jpg" alt="View from the bathroom window over Kreuzberg rooftops" loading="lazy"></a>
+      <a class="zoom" href="img/livingroom.jpg"><img src="img/livingroom.jpg" alt="Living room with blue sofa, red chair and sun on the rug" loading="lazy"></a>
+      <a class="zoom" href="img/room.jpg"><img src="img/room.jpg" alt="Work room with blue floor, teak cabinet and two windows" loading="lazy"></a>
+      <a class="zoom" href="img/tearoom.jpg"><img src="img/tearoom.jpg" alt="Tea room with table and red chairs" loading="lazy"></a>
+      <a class="zoom" href="img/bathroom.jpg"><img src="img/bathroom.jpg" alt="Bathroom with tub, blue tiles and a window" loading="lazy"></a>
     </div>
   </section>
 
@@ -145,7 +149,7 @@ dialog.lb button{position:fixed; top:12px; right:16px; font:700 28px/1 var(--fon
   <section>
     <h2 class="c">the area</h2>
     <div class="split">
-      <a class="zoom" href="img/full/entrance.jpg"><img src="img/entrance.jpg" alt="The building entrance: graffiti on the ground floor" loading="lazy"></a>
+      <a class="zoom" href="img/entrance.jpg"><img src="img/entrance.jpg" alt="The building entrance: graffiti on the ground floor" loading="lazy"></a>
       <div>
         <p>Heart of Schlesisches Tor, with all its advantages and disadvantages.</p>
         <p>This is the entrance.</p>

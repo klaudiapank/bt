@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Whole Flat, Kreuzberg</title>
+<meta name="description" content="Whole furnished flat in Siza's Bonjour Tristesse, Kreuzberg. Zwischenmiete 1.12.2026 – 31.5.2027, 1.100 € warm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap">
+<style>
+/* Same palette and type as the poster: cream paper, flat blue/red/teak shapes, Josefin Sans */
+:root{
+  --cream:#f3ead6; --ink:#1b1d22; --blue:#1f4459; --red:#a3202f; --teak:#b4642b; --salmon:#e9a07a; --mute:#5c5a54;
+  --font:"Josefin Sans",Futura,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --cream:#14191c; --ink:#efe6d3; --mute:#b3aa98; color-scheme:dark}}
+:root[data-theme="dark"]{--cream:#14191c; --ink:#efe6d3; --mute:#b3aa98; color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--cream)}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:var(--font); font-size:18px; line-height:1.45}
+img{display:block; max-width:100%}
+a{color:inherit}
+.wrap{max-width:980px; margin:0 auto; padding:0 16px}
+
+/* Hero: blue block with headline, teak disc behind, photo with red half-disc under it */
+.hero{position:relative; display:grid; grid-template-columns:1.35fr 1fr; gap:16px; padding-top:24px}
+.disc{position:absolute; width:min(46vw,420px); aspect-ratio:1; border-radius:50%; background:var(--teak); right:6%; top:8px; z-index:0}
+.block{position:relative; z-index:1; background:var(--blue); color:#f3ead6; padding:clamp(20px,5vw,44px)}
+h1{margin:0; font-weight:700; font-size:clamp(44px,9vw,92px); line-height:.92; letter-spacing:-.015em; text-transform:lowercase}
+h1 span{color:var(--salmon)}
+.bar{width:120px; height:8px; background:var(--red); margin:28px 0 18px}
+.dates{font-weight:700; font-size:clamp(20px,3.4vw,30px); line-height:1.1}
+.dates small{display:block; font-weight:600; font-size:.6em; margin-top:6px; opacity:.9}
+.pic{position:relative; z-index:1; align-self:end; display:flex; flex-direction:column}
+.pic img{width:100%; aspect-ratio:3/4; object-fit:cover}
+.half{background:var(--red); border-radius:0 0 999px 999px; aspect-ratio:2/1; display:flex; align-items:flex-start; justify-content:center; padding-top:6%}
+.half b{color:#f3ead6; font-size:clamp(28px,5vw,46px); line-height:1}
+.half b small{display:block; font-size:.42em; font-weight:600; text-align:center; margin-top:4px}
+
+.band{background:var(--teak); color:#f3ead6; font-weight:700; font-size:clamp(18px,2.6vw,24px); padding:12px 20px 9px; margin-top:16px}
+
+/* Facts with shape markers */
+.facts{display:grid; grid-template-columns:repeat(3,1fr); gap:28px 24px; margin:36px 0 8px; padding:0; list-style:none}
+.facts li{display:flex; flex-direction:column}
+.m{width:22px; height:22px; margin-bottom:10px}
+.m.c{border-radius:50%; background:var(--teak)} .m.s{background:var(--blue)} .m.h{background:var(--red); height:11px; margin-top:11px; border-radius:22px 22px 0 0}
+.facts b{font-size:clamp(28px,4vw,40px); line-height:1; letter-spacing:-.01em}
+.facts .rent b{color:var(--red)}
+.facts span{font-weight:600; font-size:16px; color:var(--mute); margin-top:6px}
+
+section{margin-top:56px}
+h2{font-size:clamp(26px,4vw,36px); margin:0 0 14px; text-transform:lowercase; letter-spacing:-.01em; display:flex; align-items:center; gap:12px}
+h2::before{content:""; width:18px; height:18px; background:var(--red); flex:none}
+h2.c::before{border-radius:50%; background:var(--teak)}
+h2.s::before{background:var(--blue)}
+p{margin:0 0 10px; max-width:62ch}
+.links{font-weight:600; font-size:16px}
+
+.gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+.gallery img{width:100%; aspect-ratio:3/4; object-fit:cover}
+.gallery img:nth-child(2){border-radius:999px 999px 0 0}
+.gallery img:nth-child(4){border-radius:0 0 999px 999px}
+.split{display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:center}
+.split img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 60%}
+.plan{background:#fbf9f4; padding:8px; border:1px solid rgba(0,0,0,.08)}
+
+.apply{background:var(--blue); color:#f3ead6; padding:clamp(22px,5vw,44px); position:relative; overflow:hidden}
+.apply h2{color:#f3ead6}
+.apply h2::before{background:var(--salmon)}
+.apply .mail{display:inline-block; margin:8px 0 18px; background:var(--red); color:#fff; font-weight:700; font-size:clamp(18px,3.4vw,28px); padding:14px 20px 10px; text-decoration:none; word-break:break-all}
+.apply .mail:focus-visible{outline:3px solid var(--salmon); outline-offset:3px}
+.apply ol{margin:0; padding-left:1.2em; max-width:60ch}
+.apply li{margin-bottom:6px}
+.apply .ring{position:absolute; right:-60px; bottom:-60px; width:200px; height:200px; border-radius:50%; background:var(--teak); opacity:.9}
+.apply > *:not(.ring){position:relative}
+footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
+
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .disc{width:70vw; right:-12vw; top:auto; bottom:28%}
+  .pic{width:78%; margin-left:auto; margin-top:-8px}
+  .facts{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr}
+  .apply .ring{width:110px; height:110px; right:-55px; bottom:-55px}
+  .apply{padding-bottom:64px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="disc" aria-hidden="true"></div>
+    <div class="block">
+      <h1>whole flat<br>kreuzberg<br><span>dec – may</span></h1>
+      <div class="bar" aria-hidden="true"></div>
+      <p class="dates">1.12.2026 – 31.5.2027<small>fixed-term Zwischenmiete, furnished</small></p>
+    </div>
+    <div class="pic">
+      <img src="img/living.jpg" alt="Living room: teak sideboard, red armchair, blue floor, sun through the Wintergarten">
+      <div class="half"><b>1.100 €<small>warm / month</small></b></div>
+    </div>
+  </header>
+  <div class="band">100 m to U1 Schlesisches Tor</div>
+
+  <ul class="facts">
+    <li class="rent"><i class="m h"></i><b>1.100 €</b><span>warm per month; electricity and internet extra, at cost</span></li>
+    <li><i class="m c"></i><b>2.370 €</b><span>Kaution, can be paid in 3 instalments</span></li>
+    <li><i class="m s"></i><b>62 m²</b><span>2½ rooms + Wintergarten</span></li>
+    <li><i class="m s"></i><b>6th</b><span>top floor</span></li>
+    <li><i class="m c"></i><b>6 months</b><span>1 Dec 2026 to 31 May 2027, fixed</span></li>
+    <li class="rent"><i class="m h"></i><b>1–2</b><span>one person or a couple</span></li>
+  </ul>
+
+  <section>
+    <h2 class="c">the building</h2>
+    <p><b>Bonjour Tristesse</b> by famous architect Álvaro Siza, 1982–84.</p>
+    <p class="links">Wikipedia: <a href="https://en.wikipedia.org/wiki/Bonjour_Tristesse_(building)" rel="noopener">English</a> · <a href="https://de.wikipedia.org/wiki/Bonjour_Tristesse_(Geb%C3%A4ude)" rel="noopener">Deutsch</a></p>
+  </section>
+
+  <section>
+    <h2 class="s">the flat</h2>
+    <p>Renovated, original mid-century furniture, workstation for home office.</p>
+    <div class="gallery" style="margin-top:18px">
+      <img src="img/living.jpg" alt="Living room with sideboard and red chair" loading="lazy">
+      <img src="img/sofa.jpg" alt="Blue sofa, yellow cushion and red floor lamp" loading="lazy">
+      <img src="img/kitchen.jpg" alt="Kitchen with wooden worktop and open shelves" loading="lazy">
+      <img src="img/view.jpg" alt="View from the bathroom window over Kreuzberg rooftops" loading="lazy">
+    </div>
+  </section>
+
+  <section>
+    <h2>floor plan</h2>
+    <a href="img/floorplan.png"><img class="plan" src="img/floorplan.png" alt="Floor plan: Wintergarten, living room, bedroom, kitchen, hall and bathroom, about 62 m² in total" loading="lazy"></a>
+  </section>
+
+  <section>
+    <h2 class="c">the area</h2>
+    <div class="split">
+      <img src="img/entrance.jpg" alt="The building entrance: graffiti on the ground floor" loading="lazy">
+      <div>
+        <p>Heart of Schlesisches Tor, with all its advantages and disadvantages.</p>
+        <p>This is the entrance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply">
+    <i class="ring" aria-hidden="true"></i>
+    <h2>apply</h2>
+    <p>Applications go to Klaudia, who coordinates the flat for Natalia.</p>
+    <a class="mail" href="mailto:klaudiapankert@gmail.com?subject=Bonjour%20Tristesse%20%E2%80%93%20Zwischenmiete">klaudiapankert@gmail.com</a>
+    <ol>
+      <li>Who you are and what you do.</li>
+      <li>Who would move in.</li>
+      <li>That the dates and price work for you.</li>
+    </ol>
+    <p style="margin-top:14px">Viewings are in person, by invitation.</p>
+  </section>
+
+  <footer>Kreuzberg, Berlin · Zwischenmiete 1.12.2026 – 31.5.2027</footer>
+</main>
+</body>
+</html>

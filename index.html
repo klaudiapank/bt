@@ -61,8 +61,8 @@ p{margin:0 0 10px; max-width:62ch}
 
 .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
 .gallery img{width:100%; aspect-ratio:3/4; object-fit:cover}
-.gallery img:nth-child(4n+2){border-radius:999px 999px 0 0}
-.gallery img:nth-child(4n){border-radius:0 0 999px 999px}
+.gallery a:nth-child(2) img{border-radius:999px 999px 0 0}
+.gallery a:nth-child(4) img{border-radius:0 0 999px 999px}
 .split{display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:center}
 .split img{width:100%; aspect-ratio:4/3; object-fit:cover; object-position:50% 60%}
 .plan{background:#fbf9f4; padding:8px; border:1px solid rgba(0,0,0,.08)}
@@ -88,6 +88,11 @@ footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
   .apply .ring{width:110px; height:110px; right:-55px; bottom:-55px}
   .apply{padding-bottom:64px}
 }
+a.zoom{display:block; cursor:zoom-in}
+dialog.lb{padding:0; border:0; background:transparent; max-width:100vw; max-height:100vh}
+dialog.lb::backdrop{background:rgba(10,14,16,.92)}
+dialog.lb img{display:block; max-width:96vw; max-height:92vh; width:auto; height:auto; object-fit:contain; cursor:zoom-out}
+dialog.lb button{position:fixed; top:12px; right:16px; font:700 28px/1 var(--font); color:#f3ead6; background:none; border:0; cursor:pointer; padding:8px}
 </style>
 </head>
 <body>
@@ -100,7 +105,7 @@ footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
       <p class="dates">1.12.2026 – 31.5.2027<small>fixed-term Zwischenmiete, furnished</small></p>
     </div>
     <div class="pic">
-      <img src="img/living.jpg" alt="Living room: teak sideboard, red armchair, blue floor, sun through the Wintergarten">
+      <a class="zoom" href="img/full/living.jpg"><img src="img/living.jpg" alt="Living room: teak sideboard, red armchair, blue floor, sun through the tea room"></a>
       <div class="half"><b>1.100 €<small>warm / month</small></b></div>
     </div>
   </header>
@@ -109,7 +114,7 @@ footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
   <ul class="facts">
     <li class="rent"><i class="m h"></i><b>1.100 €</b><span>warm per month; electricity and internet extra, at cost</span></li>
     <li><i class="m c"></i><b>2.370 €</b><span>Kaution, can be paid in 3 instalments</span></li>
-    <li><i class="m s"></i><b>62 m²</b><span>2½ rooms + Wintergarten</span></li>
+    <li><i class="m s"></i><b>62 m²</b><span>2½ rooms + tea room</span></li>
     <li><i class="m s"></i><b>6th</b><span>top floor</span></li>
     <li><i class="m c"></i><b>6 months</b><span>1 Dec 2026 to 31 May 2027, fixed</span></li>
     <li class="rent"><i class="m h"></i><b>1–2</b><span>one person or a couple</span></li>
@@ -125,26 +130,22 @@ footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
     <h2 class="s">the flat</h2>
     <p>Renovated, original mid-century furniture, workstation for home office.</p>
     <div class="gallery" style="margin-top:18px">
-      <img src="img/living.jpg" alt="Living room with sideboard and red chair" loading="lazy">
-      <img src="img/sofa.jpg" alt="Blue sofa, yellow cushion and red floor lamp" loading="lazy">
-      <img src="img/kitchen.jpg" alt="Kitchen with wooden worktop and open shelves" loading="lazy">
-      <img src="img/view.jpg" alt="View from the bathroom window over Kreuzberg rooftops" loading="lazy">
-      <img src="img/livingroom.jpg" alt="Living room with blue sofa, red chair and sun on the rug" loading="lazy">
-      <img src="img/room.jpg" alt="Second room with blue floor, teak cabinet and two windows" loading="lazy">
-      <img src="img/wintergarten.jpg" alt="Wintergarten with table and red chairs" loading="lazy">
-      <img src="img/bathroom.jpg" alt="Bathroom with tub, blue tiles and a window" loading="lazy">
+      <a class="zoom" href="img/full/living.jpg"><img src="img/living.jpg" alt="Living room with sideboard and red chair" loading="lazy"></a>
+      <a class="zoom" href="img/full/sofa.jpg"><img src="img/sofa.jpg" alt="Blue sofa, yellow cushion and red floor lamp" loading="lazy"></a>
+      <a class="zoom" href="img/full/kitchen.jpg"><img src="img/kitchen.jpg" alt="Kitchen with wooden worktop and open shelves" loading="lazy"></a>
+      <a class="zoom" href="img/full/view.jpg"><img src="img/view.jpg" alt="View from the bathroom window over Kreuzberg rooftops" loading="lazy"></a>
     </div>
   </section>
 
   <section>
     <h2>floor plan</h2>
-    <a href="img/floorplan.jpg"><img class="plan" src="img/floorplan.jpg" alt="Sketch of the floor plan: winter garden, living room, bedroom, kitchen, hall and bathroom" loading="lazy"></a>
+    <a class="zoom" href="img/floorplan.jpg"><img class="plan" src="img/floorplan.jpg" alt="Sketch of the floor plan: tea room, living room with the bed, work room, kitchen, hall and bathroom" loading="lazy"></a>
   </section>
 
   <section>
     <h2 class="c">the area</h2>
     <div class="split">
-      <img src="img/entrance.jpg" alt="The building entrance: graffiti on the ground floor" loading="lazy">
+      <a class="zoom" href="img/full/entrance.jpg"><img src="img/entrance.jpg" alt="The building entrance: graffiti on the ground floor" loading="lazy"></a>
       <div>
         <p>Heart of Schlesisches Tor, with all its advantages and disadvantages.</p>
         <p>This is the entrance.</p>
@@ -167,5 +168,17 @@ footer{margin:40px 0 32px; font-size:14px; color:var(--mute)}
 
   <footer>Kreuzberg, Berlin · Zwischenmiete 1.12.2026 – 31.5.2027</footer>
 </main>
+<dialog class="lb" id="lb"><button type="button" aria-label="Close">×</button><img alt=""></dialog>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), im=lb.querySelector('img');
+  if(!lb.showModal) return; // old browsers: links just open the image
+  document.querySelectorAll('a.zoom').forEach(function(a){
+    a.addEventListener('click',function(e){ e.preventDefault(); im.src=a.href; im.alt=(a.querySelector('img')||{}).alt||''; lb.showModal(); });
+  });
+  lb.addEventListener('click',function(){ lb.close(); });
+  lb.addEventListener('close',function(){ im.removeAttribute('src'); });
+})();
+</script>
 </body>
 </html>
